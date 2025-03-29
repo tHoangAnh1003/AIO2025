@@ -5,7 +5,7 @@ st.title("Ứng dụng quản lý công việc")
 if "tasks" not in st.session_state:
     st.session_state.tasks = []
 
-name = st.text_input(label="Nhập tên công việc: ")
+name = st.text_input(label="Nhậpa tên công việc: ")
 uu_tien = st.slider(label="Chọn mức độ ưu tiên: ", min_value=1, max_value=5, step=1)
 option = st.selectbox(label="Chọn trạng thái: ", options=("Chưa làm", "Đang làm", "Hoàn thành"))
 
@@ -19,4 +19,3 @@ if st.session_state.tasks:
 
     if st.button("Xóa danh sách"):
         st.session_state.tasks = []
-        
